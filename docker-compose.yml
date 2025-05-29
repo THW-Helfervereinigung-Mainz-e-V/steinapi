@@ -9,7 +9,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: steinapi:latest
+    image: kairuth/steinapi:latest
     container_name: steinapi
     volumes:
       - steinapi_config:/app/config
