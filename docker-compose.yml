@@ -1,0 +1,19 @@
+version: '3.8'
+
+volumes:
+  steinapi_config:
+    external: true
+    
+services:
+  steinapi:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: steinapi:latest
+    container_name: steinapi
+    volumes:
+      - steinapi_config:/app/config
+    command: ["--config", "/app/config/config.json", "--direction", "divera"]
+    stdin_open: true   # entspricht -ti
+    tty: true
+    restart: unless-stopped
