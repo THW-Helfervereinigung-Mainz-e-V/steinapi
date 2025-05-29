@@ -16,4 +16,5 @@ services:
     command: ["--config", "/app/config/config.json", "--direction", "divera"]
     stdin_open: true   # entspricht -ti
     tty: true
-    restart: unless-stopped
+    #restart: unless-stopped
+    restart: no
