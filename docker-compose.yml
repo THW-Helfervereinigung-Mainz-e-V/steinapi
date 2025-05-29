@@ -17,4 +17,4 @@ services:
     stdin_open: true   # entspricht -ti
     tty: true
     #restart: unless-stopped
-    restart: no
+    
