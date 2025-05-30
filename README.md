@@ -18,14 +18,14 @@ pip3 install "httpx[http2]"
 ```
 
 ## Einrichtung
-1. Voarb: Zunächst werden je ein Nutzer in Stein.APP und Divera 24/7 benötigt.
+1. Vorab: Zunächst werden je ein Nutzer in Stein.APP und Divera 24/7 benötigt.
     1. Divera 24/7: Im Menüpunkt Verwaltung -> Schnittstellen -> System-Benutzer muss ein neuer System-Benutzer angelegt werden. Der dabei generierte Accesskey wird gleich benötigt.
     1. Stein.APP: Es wird ein "techuser" benötigt. Also einen neuen Nutzer mit dem Häckchen "Für Nutzung über API".
 1. Damit die Fahrzeuge in Stein denen in Divera 24/7 zugeordnet werden können, wird das Feld Kennzeichen genutzt. Daher müssen sowohl in Stein als auch in Divera 24/7 die Kennzeichen gepflegt und identisch sein. 
 1. Kopiere config.json.sample nach config.json
 1. Editieren von config.json
     1. Divera: Unter "accesskey" den vorher generierten Accesskey eintragen.
-    1. Stein: Hier den API KEy des angelegten Benutzers eintragen. Unter "buname" wird die ID der Organisationseinheit eingetragen. Dies ist der Name des OVs ohne Dienststellenkürzel. Also "671" für OV Siegburg.
+    1. Stein: Hier den API KEy des angelegten Benutzers eintragen. Unter "buname" wird die ID der Organisationseinheit eingetragen. Dies ist der Name des OVs ohne Dienststellenkürzel. Also "671" für OV Siegburg. Die ID des eigenen OV kann man leicht über die URL auf der Stein Webseite in Erfahrung bringen, wenn man zur eigenen Organisationseinheit navigiert. Beim Beispiel OV Siegburg wäre dies https://stein.app/dashboard/bu/671/
 1. Anschließend das script divera.py aufrufen. 
 
 ## Docker
