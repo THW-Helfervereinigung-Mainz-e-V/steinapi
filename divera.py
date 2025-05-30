@@ -8,6 +8,7 @@ import argparse
 import json
 import logging
 import sys
+import time
 
 URL = "https://app.divera247.com/api/v2/"
 
@@ -119,3 +120,8 @@ if __name__ == "__main__":
                 s.update_asset(data_stein['id'], payload)
         else:
             logging.info("Eintrag unverändert")
+    
+    sleep_minutes = config.get("sleep")   # Optionaler Sleep am Ende (in Minuten)
+    if isinstance(sleep_minutes, int) and sleep_minutes > 0:
+        logging.info(f"Sleep aktiviert: Warte {sleep_minutes} Minuten vor Beenden...")
+        time.sleep(sleep_minutes * 60)
