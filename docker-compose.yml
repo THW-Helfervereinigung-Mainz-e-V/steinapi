@@ -13,7 +13,7 @@ services:
     container_name: steinapi
     volumes:
       - steinapi_config:/app/config
-    command: ["--config", "/app/config/config.json", "--direction", "divera"]
+    command: ["--config", "/app/config/config.json", "--direction", "both"]
     stdin_open: true   # entspricht -ti
     tty: true
     restart: unless-stopped
