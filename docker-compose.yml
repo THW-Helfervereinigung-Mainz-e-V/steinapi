@@ -9,7 +9,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: ghcr.io/thwkai/steinapi:latest
+    image: ghcr.io/thw-helfervereinigung-mainz-e-v/steinapi:latest
     container_name: steinapi
     environment:
       PYTHONUNBUFFERED: "1"
