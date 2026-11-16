@@ -11,6 +11,8 @@ services:
       dockerfile: Dockerfile
     image: ghcr.io/thwkai/steinapi:latest
     container_name: steinapi
+    environment:
+      PYTHONUNBUFFERED: "1"
     volumes:
       - steinapi_config:/app/config
     command: ["--config", "/app/config/config.json", "--direction", "both"]
